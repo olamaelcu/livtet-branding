@@ -8,3 +8,7 @@ dist/
 yarn-error.log
 *.tsbuildinfo
 storybook-static/
+android/.gradle/
+android/library/build/
+android/.idea/
+*.iml

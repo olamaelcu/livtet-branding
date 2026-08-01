@@ -3,12 +3,14 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+group = "net.olamaelcu"
+
 android {
     namespace = "net.olamaelcu.livtet.branding"
     compileSdk = 35
 
     defaultConfig {
-        minSdk = 26
+        minSdk = 24
     }
 
     compileOptions {
