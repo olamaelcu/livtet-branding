@@ -1,0 +1,9 @@
+/* Design tokens — WebAwesome CSS custom properties.
+   Layer order mirrors livtet-design-tokens generation. */
+@import "./lib/tokens/_brand-tokens.css";
+@import "./lib/tokens/_semantic-tokens.css";
+
+/* Font loading — @font-face declarations from Fontsource */
+@import "@fontsource/work-sans";
+@import "@fontsource-variable/geist";
+@import "@fontsource/jetbrains-mono";
