@@ -100,19 +100,17 @@ async function main() {
     writeColorset("surfaceDefault", __hex(t.color.surface.light.default), __hex(t.color.surface.dark.default));
     writeColorset("surfaceRaised", __hex(t.color.surface.light.raised), __hex(t.color.surface.dark.raised));
     writeColorset("surfaceLowered", __hex(t.color.surface.light.lowered), __hex(t.color.surface.dark.lowered));
-    writeColorset("surfaceHighlighted", __hex(t.color.surface.light.highlighted), __hex(t.color.surface.dark.highlighted));
     writeColorset("surfaceBorder", __hex(t.color.surface.light.border), __hex(t.color.surface.dark.border));
     writeColorset("textNormal", __hex(t.color.text.light.normal), __hex(t.color.text.dark.normal));
     writeColorset("textQuiet", __hex(t.color.text.light.quiet), __hex(t.color.text.dark.quiet));
     writeColorset("textLink", __hex(t.color.text.light.link), __hex(t.color.text.dark.link));
 
-    const semantic = ["informational", "success", "warning", "danger"] as const;
-    for (const color of semantic) {
-      const c = (t.color.semantic as any)[color];
-      const cap = color.charAt(0).toUpperCase() + color.slice(1);
-      writeColorset(`semantic${cap}Foreground`, __hex(c.light.foreground), __hex(c.dark.foreground));
-      writeColorset(`semantic${cap}Background`, __hex(c.light.background), __hex(c.dark.background));
-      writeColorset(`semantic${cap}Border`, __hex(c.light.border), __hex(c.dark.border));
+    const variants = ["neutral", "success", "warning", "danger"] as const;
+    for (const variant of variants) {
+      const c = variant === "neutral" ? t.color.neutral : (t.color.semantic as any)[variant];
+      writeColorset(`${variant}OnNormal`, __hex(c.light.foreground), __hex(c.dark.foreground));
+      writeColorset(`${variant}FillNormal`, __hex(c.light.background), __hex(c.dark.background));
+      writeColorset(`${variant}BorderNormal`, __hex(c.light.border), __hex(c.dark.border));
     }
   }
 

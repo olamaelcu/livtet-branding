@@ -11,53 +11,53 @@ import androidx.compose.ui.text.font.FontWeight
 
 object LivtetColors {
     val Brand = Color(0xFF005D37)
-    val Informational = Color(0xFF255B7D)
+    val Neutral = Color(0xFF545868)
     val Success = Color(0xFF1F634A)
     val Warning = Color(0xFF966800)
     val Danger = Color(0xFF874465)
 
     object Semantic {
-    object InformationalLight {
-        val Foreground = Color(0xFF222222)
-        val Background = Color(0xFFEDFBFF)
-        val Border = Color(0xFFB1D3EC)
+    object NeutralLight {
+        val On = Color(0xFF424554)
+        val Fill = Color(0xFFE4E5E9)
+        val Border = Color(0xFFC7C9D0)
     }
-    object InformationalDark {
-        val Foreground = Color(0xFFEEEEEE)
-        val Background = Color(0xFF062437)
-        val Border = Color(0xFF004D77)
+    object NeutralDark {
+        val On = Color(0xFFABAEB9)
+        val Fill = Color(0xFF2F323F)
+        val Border = Color(0xFF424554)
     }
 
     object SuccessLight {
-        val Foreground = Color(0xFF222222)
-        val Background = Color(0xFFEDFDF5)
+        val On = Color(0xFF222222)
+        val Fill = Color(0xFFEDFDF5)
         val Border = Color(0xFFB0D9C6)
     }
     object SuccessDark {
-        val Foreground = Color(0xFFEEEEEE)
-        val Background = Color(0xFF02291C)
+        val On = Color(0xFFEEEEEE)
+        val Fill = Color(0xFF02291C)
         val Border = Color(0xFF00583A)
     }
 
     object WarningLight {
-        val Foreground = Color(0xFF332D23)
-        val Background = Color(0xFFFFF7E2)
+        val On = Color(0xFF332D23)
+        val Fill = Color(0xFFFFF7E2)
         val Border = Color(0xFFF4D29B)
     }
     object WarningDark {
-        val Foreground = Color(0xFFFFF7EA)
-        val Background = Color(0xFF503500)
+        val On = Color(0xFFFFF7EA)
+        val Fill = Color(0xFF503500)
         val Border = Color(0xFFB58629)
     }
 
     object DangerLight {
-        val Foreground = Color(0xFF222222)
-        val Background = Color(0xFFFFF3FA)
+        val On = Color(0xFF222222)
+        val Fill = Color(0xFFFFF3FA)
         val Border = Color(0xFFE8C1D2)
     }
     object DangerDark {
-        val Foreground = Color(0xFFEEEEEE)
-        val Background = Color(0xFF331725)
+        val On = Color(0xFFEEEEEE)
+        val Fill = Color(0xFF331725)
         val Border = Color(0xFF6E2E4F)
     }
     }
@@ -65,14 +65,12 @@ object LivtetColors {
     object SurfaceLight {
         val Border = Color(0xFFE1D6C6)
         val Default = Color(0xFFFAF5EA)
-        val Highlighted = Color(0xFFECE3D6)
         val Lowered = Color(0xFFF2EADD)
         val Raised = Color(0xFFFDFCF8)
     }
     object SurfaceDark {
         val Border = Color(0xFF10171F)
         val Default = Color(0xFF000205)
-        val Highlighted = Color(0xFF0F171F)
         val Lowered = Color(0xFF000002)
         val Raised = Color(0xFF070C11)
     }
@@ -96,16 +94,16 @@ val CodeFamily    = FontFamily(Font(R.font.jetbrains_mono,    FontWeight.Normal)
 fun livtetLightColorScheme() = lightColorScheme(
     primary               = LivtetColors.Brand,
     onPrimary             = LivtetColors.TextLight.Normal,
-    primaryContainer      = LivtetColors.SurfaceLight.Highlighted,
+    primaryContainer      = LivtetColors.SurfaceLight.Default,
     onPrimaryContainer    = LivtetColors.TextLight.Normal,
-    secondary             = LivtetColors.Informational,
+    secondary             = LivtetColors.Neutral,
     onSecondary           = LivtetColors.TextLight.Normal,
-    secondaryContainer    = LivtetColors.Semantic.InformationalLight.Background,
-    onSecondaryContainer  = LivtetColors.Semantic.InformationalLight.Foreground,
+    secondaryContainer    = LivtetColors.Semantic.NeutralLight.Fill,
+    onSecondaryContainer  = LivtetColors.Semantic.NeutralLight.On,
     tertiary              = LivtetColors.Success,
     onTertiary            = LivtetColors.TextLight.Normal,
-    tertiaryContainer     = LivtetColors.Semantic.SuccessLight.Background,
-    onTertiaryContainer   = LivtetColors.Semantic.SuccessLight.Foreground,
+    tertiaryContainer     = LivtetColors.Semantic.SuccessLight.Fill,
+    onTertiaryContainer   = LivtetColors.Semantic.SuccessLight.On,
     background            = LivtetColors.SurfaceLight.Default,
     onBackground          = LivtetColors.TextLight.Normal,
     surface               = LivtetColors.SurfaceLight.Default,
@@ -115,11 +113,11 @@ fun livtetLightColorScheme() = lightColorScheme(
     surfaceTint           = LivtetColors.Brand,
     inverseSurface        = LivtetColors.SurfaceDark.Default,
     inverseOnSurface      = LivtetColors.TextDark.Normal,
-    inversePrimary        = LivtetColors.SurfaceLight.Highlighted,
+    inversePrimary        = LivtetColors.SurfaceLight.Default,
     error                 = LivtetColors.Danger,
-    onError               = LivtetColors.Semantic.DangerLight.Foreground,
-    errorContainer        = LivtetColors.Semantic.DangerLight.Background,
-    onErrorContainer      = LivtetColors.Semantic.DangerLight.Foreground,
+    onError               = LivtetColors.Semantic.DangerLight.On,
+    errorContainer        = LivtetColors.Semantic.DangerLight.Fill,
+    onErrorContainer      = LivtetColors.Semantic.DangerLight.On,
     outline               = LivtetColors.SurfaceLight.Border,
     outlineVariant        = LivtetColors.SurfaceLight.Border,
     scrim                 = LivtetColors.SurfaceDark.Default,
@@ -128,16 +126,16 @@ fun livtetLightColorScheme() = lightColorScheme(
 fun livtetDarkColorScheme() = darkColorScheme(
     primary               = LivtetColors.Brand,
     onPrimary             = LivtetColors.TextDark.Normal,
-    primaryContainer      = LivtetColors.SurfaceDark.Highlighted,
+    primaryContainer      = LivtetColors.SurfaceDark.Default,
     onPrimaryContainer    = LivtetColors.TextDark.Normal,
-    secondary             = LivtetColors.Informational,
+    secondary             = LivtetColors.Neutral,
     onSecondary           = LivtetColors.TextDark.Normal,
-    secondaryContainer    = LivtetColors.Semantic.InformationalDark.Background,
-    onSecondaryContainer  = LivtetColors.Semantic.InformationalDark.Foreground,
+    secondaryContainer    = LivtetColors.Semantic.NeutralDark.Fill,
+    onSecondaryContainer  = LivtetColors.Semantic.NeutralDark.On,
     tertiary              = LivtetColors.Success,
     onTertiary            = LivtetColors.TextDark.Normal,
-    tertiaryContainer     = LivtetColors.Semantic.SuccessDark.Background,
-    onTertiaryContainer   = LivtetColors.Semantic.SuccessDark.Foreground,
+    tertiaryContainer     = LivtetColors.Semantic.SuccessDark.Fill,
+    onTertiaryContainer   = LivtetColors.Semantic.SuccessDark.On,
     background            = LivtetColors.SurfaceDark.Default,
     onBackground          = LivtetColors.TextDark.Normal,
     surface               = LivtetColors.SurfaceDark.Default,
@@ -147,11 +145,11 @@ fun livtetDarkColorScheme() = darkColorScheme(
     surfaceTint           = LivtetColors.Brand,
     inverseSurface        = LivtetColors.SurfaceLight.Default,
     inverseOnSurface      = LivtetColors.TextLight.Normal,
-    inversePrimary        = LivtetColors.SurfaceDark.Highlighted,
+    inversePrimary        = LivtetColors.SurfaceDark.Default,
     error                 = LivtetColors.Danger,
-    onError               = LivtetColors.Semantic.DangerDark.Foreground,
-    errorContainer        = LivtetColors.Semantic.DangerDark.Background,
-    onErrorContainer      = LivtetColors.Semantic.DangerDark.Foreground,
+    onError               = LivtetColors.Semantic.DangerDark.On,
+    errorContainer        = LivtetColors.Semantic.DangerDark.Fill,
+    onErrorContainer      = LivtetColors.Semantic.DangerDark.On,
     outline               = LivtetColors.SurfaceDark.Border,
     outlineVariant        = LivtetColors.SurfaceDark.Border,
     scrim                 = LivtetColors.SurfaceLight.Default,
