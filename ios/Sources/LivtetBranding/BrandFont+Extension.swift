@@ -7,7 +7,7 @@ public extension Font {
         .custom("Work Sans", size: size, relativeTo: .body).weight(weight)
     }
     static func livtetHeading(size: CGFloat = 24, weight: Font.Weight = .semibold) -> Font {
-        .custom("Geist", size: size, relativeTo: .title).weight(weight)
+        .custom("Lora", size: size, relativeTo: .title).weight(weight)
     }
     static func livtetCode(size: CGFloat = 14) -> Font {
         .custom("JetBrains Mono", size: size, relativeTo: .body)

@@ -2,33 +2,47 @@
 
 @layer wa-theme-overrides {
   :where(:root),
+  .wa-theme-livtet,
+  .wa-palette-livtet,
+  .wa-light,
+  .wa-dark .wa-invert,
+  .wa-light .wa-theme-livtet,
+  .wa-dark .wa-theme-livtet.wa-invert,
+  .wa-dark .wa-theme-livtet .wa-invert,
+  .wa-light .wa-palette-livtet,
+  .wa-dark .wa-palette-livtet.wa-invert,
+  .wa-dark .wa-palette-livtet .wa-invert {
+    --wa-color-surface-border: oklch(88% 0.02 85);
+    --wa-color-surface-default: oklch(96.8% 0.02 90);
+    --wa-color-surface-lowered: oklch(94% 0.02 85);
+    --wa-color-surface-raised: oklch(99% 0.005 90);
+
+    --wa-color-text-link: oklch(48% 0.12 158);
+    --wa-color-text-normal: oklch(25% 0.02 80);
+    --wa-color-text-quiet: oklch(45% 0.02 80);
+  }
+
+  .wa-dark,
+  .wa-invert,
+  .wa-dark .wa-theme-livtet,
+  .wa-light .wa-theme-livtet.wa-invert,
+  .wa-light .wa-theme-livtet .wa-invert,
+  .wa-dark .wa-palette-livtet,
+  .wa-light .wa-palette-livtet.wa-invert,
+  .wa-light .wa-palette-livtet .wa-invert {
+    --wa-color-surface-border: oklch(21% 0.02 100);
+    --wa-color-surface-default: oklch(9% 0.02 95);
+    --wa-color-surface-lowered: oklch(6% 0.015 95);
+    --wa-color-surface-raised: oklch(16% 0.015 100);
+
+    --wa-color-text-link: oklch(72% 0.08 158);
+    --wa-color-text-normal: oklch(90% 0.015 90);
+    --wa-color-text-quiet: oklch(66% 0.015 90);
+  }
+
+  :where(:root),
+  .wa-theme-livtet,
   .wa-palette-livtet {
-    :where(:root:not([data-theme="dark"]):not(.wa-dark)) & {
-      --wa-color-surface-border: oklch(88% 0.025 75);
-      --wa-color-surface-default: oklch(97% 0.015 85);
-      --wa-color-surface-lowered: oklch(94% 0.02 80);
-      --wa-color-surface-raised: oklch(99% 0.005 90);
-    }
-
-    :where([data-theme="dark"], .wa-dark) & {
-      --wa-color-surface-border: oklch(20% 0.02 255);
-      --wa-color-surface-default: oklch(8% 0.02 250);
-      --wa-color-surface-lowered: oklch(5% 0.015 250);
-      --wa-color-surface-raised: oklch(15% 0.015 250);
-    }
-
-    :where(:root:not([data-theme="dark"]):not(.wa-dark)) & {
-      --wa-color-text-link: oklch(48% 0.12 158);
-      --wa-color-text-normal: oklch(25% 0.04 50);
-      --wa-color-text-quiet: oklch(45% 0.03 45);
-    }
-
-    :where([data-theme="dark"], .wa-dark) & {
-      --wa-color-text-link: oklch(72% 0.08 158);
-      --wa-color-text-normal: oklch(90% 0.015 85);
-      --wa-color-text-quiet: oklch(65% 0.02 80);
-    }
-
     --wa-color-brand-95: oklch(93% 0.04 158);
     --wa-color-brand-90: oklch(85% 0.08 158);
     --wa-color-brand-80: oklch(72% 0.11 158);
@@ -42,17 +56,27 @@
     --wa-color-brand-05: oklch(8% 0.02 158);
     --wa-color-brand: var(--wa-color-brand-50);
     --wa-color-brand-on: white;
+
+    --wa-color-neutral-95: oklch(95% 0.006 98);
+    --wa-color-neutral-90: oklch(90% 0.009 98);
+    --wa-color-neutral-80: oklch(80% 0.012 98);
+    --wa-color-neutral-70: oklch(70% 0.015 98);
+    --wa-color-neutral-60: oklch(60% 0.018 98);
+    --wa-color-neutral-50: oklch(46% 0.02 98);
+    --wa-color-neutral-40: oklch(40% 0.018 98);
+    --wa-color-neutral-30: oklch(30% 0.015 98);
+    --wa-color-neutral-20: oklch(20% 0.012 98);
+    --wa-color-neutral-10: oklch(12% 0.009 98);
+    --wa-color-neutral-05: oklch(8% 0.006 98);
+    --wa-color-neutral: var(--wa-color-neutral-50);
+    --wa-color-neutral-on: white;
   }
 
   :where(:root),
-  .wa-theme-default,
-  .wa-light,
-  .wa-dark,
-  .wa-invert,
+  .wa-theme-livtet,
   .wa-palette-livtet {
-    --wa-border-radius-scale: 0.25;
     --wa-font-family-body: Work Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
-    --wa-font-family-heading: Geist Variable, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --wa-font-family-heading: Lora, Georgia, Times New Roman, serif;
     --wa-font-family-code: JetBrains Mono, Menlo, Consolas, Monaco, monospace;
   }
 }

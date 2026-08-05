@@ -11,6 +11,7 @@
       "default": "./dist/index.js"
     },
     "./app.css": "./src/app.css",
+    "./themes/livtet.css": "./src/themes/livtet.css",
     "./tokens.json": "./tokens.json"
   },
   "files": [
@@ -28,7 +29,7 @@
     "svelte": "^5.0.0"
   },
   "dependencies": {
-    "@fontsource-variable/geist": "^5.3.0",
+    "@fontsource-variable/lora": "^5.3.0",
     "@fontsource/jetbrains-mono": "^5.2.5",
     "@fontsource/work-sans": "^5.2.5"
   },

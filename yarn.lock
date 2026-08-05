@@ -428,10 +428,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource-variable/geist@npm:^5.3.0":
+"@fontsource-variable/lora@npm:^5.3.0":
   version: 5.3.0
-  resolution: "@fontsource-variable/geist@npm:5.3.0"
-  checksum: 10c0/6b1d1d249643377c885d040769bf0964f242e8d03c4470535329ad4eed3d30a8134fea0d45c0b99b8069924a1f506a3bcb5b8d9cea77b7b5234dc7dd57371842
+  resolution: "@fontsource-variable/lora@npm:5.3.0"
+  checksum: 10c0/b9eaa8c0beae96aa2b2cbddc3da2b342a9b25d6496ea0ceba3ea5f8f5e01e5b92365db23cd5be32a29c0c2908e7e4a3796a5525a0e04e92072399c5297270884
   languageName: node
   linkType: hard
 
@@ -589,7 +589,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@olamaelcu/livtet-branding@workspace:."
   dependencies:
-    "@fontsource-variable/geist": "npm:^5.3.0"
+    "@fontsource-variable/lora": "npm:^5.3.0"
     "@fontsource/jetbrains-mono": "npm:^5.2.5"
     "@fontsource/work-sans": "npm:^5.2.5"
     "@storybook/addon-essentials": "npm:^8.6.0"

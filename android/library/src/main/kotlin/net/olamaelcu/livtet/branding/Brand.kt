@@ -11,21 +11,21 @@ import androidx.compose.ui.text.font.FontWeight
 
 object LivtetColors {
     val Brand = Color(0xFF005D37)
-    val Neutral = Color(0xFF545868)
+    val Neutral = Color(0xFF5B584C)
     val Success = Color(0xFF1F634A)
     val Warning = Color(0xFF966800)
     val Danger = Color(0xFF874465)
 
     object Semantic {
     object NeutralLight {
-        val On = Color(0xFF424554)
-        val Fill = Color(0xFFE4E5E9)
-        val Border = Color(0xFFC7C9D0)
+        val On = Color(0xFF4B483C)
+        val Fill = Color(0xFFE8E7DB)
+        val Border = Color(0xFFCECBBC)
     }
     object NeutralDark {
-        val On = Color(0xFFABAEB9)
-        val Fill = Color(0xFF2F323F)
-        val Border = Color(0xFF424554)
+        val On = Color(0xFFB4B1A7)
+        val Fill = Color(0xFF353328)
+        val Border = Color(0xFF4A483C)
     }
 
     object SuccessLight {
@@ -63,32 +63,32 @@ object LivtetColors {
     }
 
     object SurfaceLight {
-        val Border = Color(0xFFE1D6C6)
-        val Default = Color(0xFFFAF5EA)
-        val Lowered = Color(0xFFF2EADD)
+        val Border = Color(0xFFDDD7C9)
+        val Default = Color(0xFFFAF4E6)
+        val Lowered = Color(0xFFF1EADC)
         val Raised = Color(0xFFFDFCF8)
     }
     object SurfaceDark {
-        val Border = Color(0xFF10171F)
-        val Default = Color(0xFF000205)
-        val Lowered = Color(0xFF000002)
-        val Raised = Color(0xFF070C11)
+        val Border = Color(0xFF1A190E)
+        val Default = Color(0xFF040200)
+        val Lowered = Color(0xFF010100)
+        val Raised = Color(0xFF0F0D06)
     }
 
     object TextLight {
-        val Normal = Color(0xFF311C0F)
-        val Quiet  = Color(0xFF645048)
+        val Normal = Color(0xFF272117)
+        val Quiet  = Color(0xFF5B5449)
         val Link   = Color(0xFF007142)
     }
     object TextDark {
-        val Normal = Color(0xFFE3DDD3)
-        val Quiet  = Color(0xFF968E82)
+        val Normal = Color(0xFFE2DED3)
+        val Quiet  = Color(0xFF969288)
         val Link   = Color(0xFF79B492)
     }
 }
 
 val BodyFamily    = FontFamily(Font(R.font.work_sans,    FontWeight.Normal))
-val HeadingFamily = FontFamily(Font(R.font.geist, FontWeight.Medium))
+val HeadingFamily = FontFamily(Font(R.font.lora, FontWeight.Medium))
 val CodeFamily    = FontFamily(Font(R.font.jetbrains_mono,    FontWeight.Normal))
 
 fun livtetLightColorScheme() = lightColorScheme(

@@ -11,4 +11,5 @@ storybook-static/
 android/.gradle/
 android/library/build/
 android/.idea/
+android/.kotlin/
 *.iml
