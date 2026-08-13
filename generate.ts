@@ -6,6 +6,12 @@ import {
   generateAndroidKotlin,
   generateAndroidXml,
   generateFontFamilyXml,
+  generateAndroidForegroundVector,
+  generateAndroidFlavorXml,
+  generateAndroidFlavorMipmaps,
+  generateAndroidFlavorAdaptiveIcons,
+  ANDROID_STORE_FLAVORS,
+  flavorHex,
   generateIOSSwiftColorExt,
   generateIOSSwiftFontExt,
   generateColorsetContentsJson,
@@ -14,7 +20,7 @@ import {
   brandForegroundHex,
 } from "./scripts/lib.ts";
 import { resolve, dirname } from "node:path";
-import { mkdirSync } from "node:fs";
+import { mkdirSync, readFileSync } from "node:fs";
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname));
 
@@ -70,6 +76,41 @@ async function main() {
         resolve(androidRes, `font/${key}.xml`),
         generateFontFamilyXml(androidName),
       );
+    }
+
+    // Per-flavor launcher icon resources. Required-flavor guard: every
+    // flavor listed in ANDROID_STORE_FLAVORS must have a matching
+    // entry under tokens.json#color.brand.flavor — `flavorHex()` throws
+    // with the offending name if not, so a forgotten flavor can't
+    // ship with the default brand tint.
+    const logoSvg = readFileSync(resolve(ROOT, "assets/logo.svg"), "utf8");
+    const pathMatch = logoSvg.match(/d="([^"]+)"/);
+    if (!pathMatch) {
+      throw new Error("Could not extract path data from assets/logo.svg");
+    }
+    const pathData = pathMatch[1];
+
+    // Shared foreground vector — identical across flavors; the
+    // per-flavor tint lives on the adaptive-icon background only.
+    emit(
+      resolve(androidRes, "drawable/ic_launcher_foreground.xml"),
+      generateAndroidForegroundVector(pathData),
+    );
+
+    for (const flavor of ANDROID_STORE_FLAVORS) {
+      // Validate up front so all required-flavor errors surface before
+      // any partial write happens.
+      flavorHex(flavor, t);
+
+      // Per-flavor resources live under `src/<flavor>/res/`, NOT
+      // `src/main/res/<flavor>/` — Android's flavor source-set layout
+      // is `src/<flavor>/` at the module root, sibling to `src/main/`.
+      const flavorSrcRoot = resolve(ROOT, "android/library/src", flavor);
+      const flavorRes = resolve(flavorSrcRoot, "res");
+      mkdirSync(flavorRes, { recursive: true });
+      emit(resolve(flavorRes, "values/colors.xml"), generateAndroidFlavorXml(flavor, t));
+      generateAndroidFlavorMipmaps(flavor, t, pathData, flavorRes);
+      generateAndroidFlavorAdaptiveIcons(flavorRes);
     }
   }
 

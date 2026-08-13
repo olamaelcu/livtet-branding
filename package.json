@@ -34,6 +34,7 @@
     "@fontsource/work-sans": "^5.2.5"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@storybook/addon-essentials": "^8.6.0",
     "@storybook/blocks": "^8.6.0",
     "@storybook/svelte": "^8.6.0",
