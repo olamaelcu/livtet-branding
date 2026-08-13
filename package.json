@@ -10,6 +10,10 @@
       "svelte": "./src/lib/index.ts",
       "default": "./dist/index.js"
     },
+    "./apply-color-scheme": {
+      "types": "./dist/apply-color-scheme.d.ts",
+      "import": "./dist/apply-color-scheme.js"
+    },
     "./app.css": "./src/app.css",
     "./themes/livtet.css": "./src/themes/livtet.css",
     "./tokens.json": "./tokens.json"

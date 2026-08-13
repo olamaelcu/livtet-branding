@@ -168,6 +168,19 @@ ${surface(t.color.surface.dark)}
 ${text(t.color.text.dark)}
   }
 
+  /* Auto-detect dark mode via OS preference. Scoped to :where(:root) so
+     explicit class overrides (.wa-light, .wa-dark, .wa-invert, .wa-theme-*)
+     still win by specificity. Source order matters: this block must come
+     after the light block above so the :where(:root) tie at the same
+     specificity resolves to dark. */
+  @media (prefers-color-scheme: dark) {
+    :where(:root) {
+${surface(t.color.surface.dark)}
+
+${text(t.color.text.dark)}
+    }
+  }
+
   :where(:root),
   .wa-theme-livtet,
   .wa-palette-livtet {
@@ -183,7 +196,7 @@ ${text(t.color.text.dark)}
     --wa-color-brand-10: oklch(12% 0.03 ${brandHue});
     --wa-color-brand-05: oklch(8% 0.02 ${brandHue});
     --wa-color-brand: var(--wa-color-brand-50);
-    --wa-color-brand-on: white;
+    --wa-color-brand-on: oklch(100% 0 0);
 
     --wa-color-neutral-95: oklch(95% 0.006 ${neutralHue});
     --wa-color-neutral-90: oklch(90% 0.009 ${neutralHue});
@@ -197,7 +210,7 @@ ${text(t.color.text.dark)}
     --wa-color-neutral-10: oklch(12% 0.009 ${neutralHue});
     --wa-color-neutral-05: oklch(8% 0.006 ${neutralHue});
     --wa-color-neutral: var(--wa-color-neutral-50);
-    --wa-color-neutral-on: white;
+    --wa-color-neutral-on: oklch(100% 0 0);
   }
 
   :where(:root),
@@ -226,7 +239,7 @@ function variantRampCss(t: Tokens, variant: string): string {
     --wa-color-${variant}-10: oklch(12% 0.03 ${baseHue});
     --wa-color-${variant}-05: oklch(8% 0.02 ${baseHue});
     --wa-color-${variant}: var(--wa-color-${variant}-50);
-    --wa-color-${variant}-on: white;`;
+    --wa-color-${variant}-on: oklch(100% 0 0);`;
 }
 
 export function generateSemanticColorsCSS(t: Tokens): string {
@@ -409,7 +422,7 @@ export function generateAndroidXml(t: Tokens): string {
 //     for API 26+
 //   - mipmap-anydpi-v33/ic_launcher{,_round}.xml — same shell for API 33+
 //
-// The foreground (the white book glyph) is shared across flavors and
+// The foreground (the high-lightness book glyph) is shared across flavors and
 // lives in drawable/ic_launcher_foreground.xml — also generated, sourced
 // from branding/assets/logo.svg so the SVG is the single source of truth
 // for the artwork.

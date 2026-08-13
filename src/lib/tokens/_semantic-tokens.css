@@ -15,7 +15,7 @@
     --wa-color-success-10: oklch(12% 0.03 165);
     --wa-color-success-05: oklch(8% 0.02 165);
     --wa-color-success: var(--wa-color-success-50);
-    --wa-color-success-on: white;
+    --wa-color-success-on: oklch(100% 0 0);
 
     --wa-color-warning-95: oklch(93% 0.04 80);
     --wa-color-warning-90: oklch(85% 0.08 80);
@@ -29,7 +29,7 @@
     --wa-color-warning-10: oklch(12% 0.03 80);
     --wa-color-warning-05: oklch(8% 0.02 80);
     --wa-color-warning: var(--wa-color-warning-50);
-    --wa-color-warning-on: white;
+    --wa-color-warning-on: oklch(100% 0 0);
 
     --wa-color-danger-95: oklch(93% 0.04 350);
     --wa-color-danger-90: oklch(85% 0.08 350);
@@ -43,6 +43,6 @@
     --wa-color-danger-10: oklch(12% 0.03 350);
     --wa-color-danger-05: oklch(8% 0.02 350);
     --wa-color-danger: var(--wa-color-danger-50);
-    --wa-color-danger-on: white;
+    --wa-color-danger-on: oklch(100% 0 0);
   }
 }

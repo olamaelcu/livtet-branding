@@ -1,48 +1,22 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import {
+    applyColorScheme,
+    autoApplyColorScheme,
+    getStoredScheme,
+    toggleStoredScheme,
+  } from "../apply-color-scheme.js";
 
   let isDark = $state(false);
 
   onMount(() => {
-    const stored = prefersStored();
-    isDark = stored ?? prefersSystem();
-    applyTheme(isDark);
+    autoApplyColorScheme();
+    isDark = getStoredScheme() ?? false;
   });
 
-  function prefersStored(): boolean | null {
-    try {
-      const v = localStorage.getItem("theme");
-      if (v === "dark") return true;
-      if (v === "light") return false;
-    } catch {
-      /* localStorage may be unavailable */
-    }
-    return null;
-  }
-
-  function prefersSystem(): boolean {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  }
-
-  function applyTheme(dark: boolean) {
-    const html = document.documentElement;
-    if (dark) {
-      html.classList.add("wa-dark");
-      html.setAttribute("data-theme", "dark");
-    } else {
-      html.classList.remove("wa-dark");
-      html.setAttribute("data-theme", "light");
-    }
-  }
-
   function toggle() {
-    isDark = !isDark;
-    try {
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    } catch {
-      /* swallow */
-    }
-    applyTheme(isDark);
+    isDark = toggleStoredScheme();
+    applyColorScheme(isDark);
   }
 </script>
 

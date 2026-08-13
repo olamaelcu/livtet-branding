@@ -14,9 +14,11 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/lib/index.ts"),
+      entry: {
+        index: resolve(__dirname, "src/lib/index.ts"),
+        "apply-color-scheme": resolve(__dirname, "src/lib/apply-color-scheme.ts"),
+      },
       formats: ["es"],
-      fileName: "index",
     },
     outDir: "dist",
     emptyOutDir: true,

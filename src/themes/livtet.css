@@ -24,8 +24,8 @@
     color-scheme: light;
     color: var(--wa-color-text-normal);
 
-    --wa-color-surface-raised: white;
-    --wa-color-surface-default: white;
+    --wa-color-surface-raised: oklch(100% 0 0);
+    --wa-color-surface-default: oklch(100% 0 0);
     --wa-color-surface-lowered: var(--wa-color-neutral-95);
     --wa-color-surface-border: var(--wa-color-neutral-90);
 
@@ -33,13 +33,13 @@
     --wa-color-text-quiet: var(--wa-color-neutral-40);
     --wa-color-text-link: var(--wa-color-brand-40);
 
-    --wa-color-overlay-modal: color-mix(in oklab, var(--wa-color-neutral-05) 50%, transparent);
-    --wa-color-overlay-inline: color-mix(in oklab, var(--wa-color-neutral-80) 25%, transparent);
+    --wa-color-overlay-modal: color-mix(in oklab, var(--wa-color-neutral-05) 50%, oklch(0% 0 0 / 0));
+    --wa-color-overlay-inline: color-mix(in oklab, var(--wa-color-neutral-80) 25%, oklch(0% 0 0 / 0));
 
     --wa-color-shadow: color-mix(
       in oklab,
       var(--wa-color-neutral-30) calc(var(--wa-shadow-blur-scale) * 4% + 8%),
-      transparent
+      oklch(0% 0 0 / 0)
     );
 
     --wa-color-focus: var(--wa-color-brand-60);
@@ -55,7 +55,7 @@
     --wa-color-brand-border-loud: var(--wa-color-brand-60);
     --wa-color-brand-on-quiet: var(--wa-color-brand-40);
     --wa-color-brand-on-normal: var(--wa-color-brand-30);
-    --wa-color-brand-on-loud: white;
+    --wa-color-brand-on-loud: oklch(100% 0 0);
 
     --wa-color-success-fill-quiet: var(--wa-color-success-95);
     --wa-color-success-fill-normal: var(--wa-color-success-90);
@@ -65,7 +65,7 @@
     --wa-color-success-border-loud: var(--wa-color-success-60);
     --wa-color-success-on-quiet: var(--wa-color-success-40);
     --wa-color-success-on-normal: var(--wa-color-success-30);
-    --wa-color-success-on-loud: white;
+    --wa-color-success-on-loud: oklch(100% 0 0);
 
     --wa-color-warning-fill-quiet: var(--wa-color-warning-95);
     --wa-color-warning-fill-normal: var(--wa-color-warning-90);
@@ -75,7 +75,7 @@
     --wa-color-warning-border-loud: var(--wa-color-warning-60);
     --wa-color-warning-on-quiet: var(--wa-color-warning-40);
     --wa-color-warning-on-normal: var(--wa-color-warning-30);
-    --wa-color-warning-on-loud: white;
+    --wa-color-warning-on-loud: oklch(100% 0 0);
 
     --wa-color-danger-fill-quiet: var(--wa-color-danger-95);
     --wa-color-danger-fill-normal: var(--wa-color-danger-90);
@@ -85,7 +85,7 @@
     --wa-color-danger-border-loud: var(--wa-color-danger-60);
     --wa-color-danger-on-quiet: var(--wa-color-danger-40);
     --wa-color-danger-on-normal: var(--wa-color-danger-30);
-    --wa-color-danger-on-loud: white;
+    --wa-color-danger-on-loud: oklch(100% 0 0);
 
     --wa-color-neutral-fill-quiet: var(--wa-color-neutral-95);
     --wa-color-neutral-fill-normal: var(--wa-color-neutral-90);
@@ -95,7 +95,7 @@
     --wa-color-neutral-border-loud: var(--wa-color-neutral-60);
     --wa-color-neutral-on-quiet: var(--wa-color-neutral-40);
     --wa-color-neutral-on-normal: var(--wa-color-neutral-30);
-    --wa-color-neutral-on-loud: white;
+    --wa-color-neutral-on-loud: oklch(100% 0 0);
     /* #endregion */
   }
 
@@ -110,20 +110,20 @@
 
     --wa-color-surface-raised: var(--wa-color-neutral-10);
     --wa-color-surface-default: var(--wa-color-neutral-05);
-    --wa-color-surface-lowered: color-mix(in oklab, var(--wa-color-surface-default), black 20%);
+    --wa-color-surface-lowered: color-mix(in oklab, var(--wa-color-surface-default), oklch(0% 0 0) 20%);
     --wa-color-surface-border: var(--wa-color-neutral-20);
 
     --wa-color-text-normal: var(--wa-color-neutral-95);
     --wa-color-text-quiet: var(--wa-color-neutral-60);
     --wa-color-text-link: var(--wa-color-brand-70);
 
-    --wa-color-overlay-modal: color-mix(in oklab, black 60%, transparent);
-    --wa-color-overlay-inline: color-mix(in oklab, var(--wa-color-neutral-50) 10%, transparent);
+    --wa-color-overlay-modal: color-mix(in oklab, oklch(0% 0 0) 60%, oklch(0% 0 0 / 0));
+    --wa-color-overlay-inline: color-mix(in oklab, var(--wa-color-neutral-50) 10%, oklch(0% 0 0 / 0));
 
     --wa-color-shadow: color-mix(
       in oklab,
       var(--wa-color-surface-lowered) calc(var(--wa-shadow-blur-scale) * 32% + 40%),
-      transparent
+      oklch(0% 0 0 / 0)
     );
 
     --wa-color-focus: var(--wa-color-brand-60);
@@ -139,7 +139,7 @@
     --wa-color-brand-border-loud: var(--wa-color-brand-40);
     --wa-color-brand-on-quiet: var(--wa-color-brand-60);
     --wa-color-brand-on-normal: var(--wa-color-brand-70);
-    --wa-color-brand-on-loud: white;
+    --wa-color-brand-on-loud: oklch(100% 0 0);
 
     --wa-color-success-fill-quiet: var(--wa-color-success-10);
     --wa-color-success-fill-normal: var(--wa-color-success-20);
@@ -149,7 +149,7 @@
     --wa-color-success-border-loud: var(--wa-color-success-40);
     --wa-color-success-on-quiet: var(--wa-color-success-60);
     --wa-color-success-on-normal: var(--wa-color-success-70);
-    --wa-color-success-on-loud: white;
+    --wa-color-success-on-loud: oklch(100% 0 0);
 
     --wa-color-warning-fill-quiet: var(--wa-color-warning-10);
     --wa-color-warning-fill-normal: var(--wa-color-warning-20);
@@ -159,7 +159,7 @@
     --wa-color-warning-border-loud: var(--wa-color-warning-40);
     --wa-color-warning-on-quiet: var(--wa-color-warning-60);
     --wa-color-warning-on-normal: var(--wa-color-warning-70);
-    --wa-color-warning-on-loud: white;
+    --wa-color-warning-on-loud: oklch(100% 0 0);
 
     --wa-color-danger-fill-quiet: var(--wa-color-danger-10);
     --wa-color-danger-fill-normal: var(--wa-color-danger-20);
@@ -169,7 +169,7 @@
     --wa-color-danger-border-loud: var(--wa-color-danger-40);
     --wa-color-danger-on-quiet: var(--wa-color-danger-60);
     --wa-color-danger-on-normal: var(--wa-color-danger-70);
-    --wa-color-danger-on-loud: white;
+    --wa-color-danger-on-loud: oklch(100% 0 0);
 
     --wa-color-neutral-fill-quiet: var(--wa-color-neutral-10);
     --wa-color-neutral-fill-normal: var(--wa-color-neutral-20);
@@ -181,6 +181,92 @@
     --wa-color-neutral-on-normal: var(--wa-color-neutral-70);
     --wa-color-neutral-on-loud: var(--wa-color-neutral-05);
     /* #endregion */
+  }
+
+  /* Auto-detect dark mode via OS preference. Scoped to :where(:root) so
+     explicit class overrides (.wa-light, .wa-dark, .wa-invert, .wa-theme-*)
+     still win by specificity. Source order matters: this block must come
+     after the light block at the top of the file so the :where(:root)
+     tie at the same specificity resolves to dark. Mirrors the dark
+     class block above verbatim. */
+  @media (prefers-color-scheme: dark) {
+    :where(:root) {
+      color-scheme: dark;
+      color: var(--wa-color-text-normal);
+
+      --wa-color-surface-raised: var(--wa-color-neutral-10);
+      --wa-color-surface-default: var(--wa-color-neutral-05);
+      --wa-color-surface-lowered: color-mix(in oklab, var(--wa-color-surface-default), oklch(0% 0 0) 20%);
+      --wa-color-surface-border: var(--wa-color-neutral-20);
+
+      --wa-color-text-normal: var(--wa-color-neutral-95);
+      --wa-color-text-quiet: var(--wa-color-neutral-60);
+      --wa-color-text-link: var(--wa-color-brand-70);
+
+      --wa-color-overlay-modal: color-mix(in oklab, oklch(0% 0 0) 60%, oklch(0% 0 0 / 0));
+      --wa-color-overlay-inline: color-mix(in oklab, var(--wa-color-neutral-50) 10%, oklch(0% 0 0 / 0));
+
+      --wa-color-shadow: color-mix(
+        in oklab,
+        var(--wa-color-surface-lowered) calc(var(--wa-shadow-blur-scale) * 32% + 40%),
+        oklch(0% 0 0 / 0)
+      );
+
+      --wa-color-focus: var(--wa-color-brand-60);
+
+      --wa-color-mix-hover: oklch(from currentColor calc(1 - l) c h) 20%;
+      --wa-color-mix-active: var(--wa-color-surface-default) 20%;
+
+      --wa-color-brand-fill-quiet: var(--wa-color-brand-10);
+      --wa-color-brand-fill-normal: var(--wa-color-brand-20);
+      --wa-color-brand-fill-loud: var(--wa-color-brand-50);
+      --wa-color-brand-border-quiet: var(--wa-color-brand-20);
+      --wa-color-brand-border-normal: var(--wa-color-brand-30);
+      --wa-color-brand-border-loud: var(--wa-color-brand-40);
+      --wa-color-brand-on-quiet: var(--wa-color-brand-60);
+      --wa-color-brand-on-normal: var(--wa-color-brand-70);
+      --wa-color-brand-on-loud: oklch(100% 0 0);
+
+      --wa-color-success-fill-quiet: var(--wa-color-success-10);
+      --wa-color-success-fill-normal: var(--wa-color-success-20);
+      --wa-color-success-fill-loud: var(--wa-color-success-50);
+      --wa-color-success-border-quiet: var(--wa-color-success-20);
+      --wa-color-success-border-normal: var(--wa-color-success-30);
+      --wa-color-success-border-loud: var(--wa-color-success-40);
+      --wa-color-success-on-quiet: var(--wa-color-success-60);
+      --wa-color-success-on-normal: var(--wa-color-success-70);
+      --wa-color-success-on-loud: oklch(100% 0 0);
+
+      --wa-color-warning-fill-quiet: var(--wa-color-warning-10);
+      --wa-color-warning-fill-normal: var(--wa-color-warning-20);
+      --wa-color-warning-fill-loud: var(--wa-color-warning-50);
+      --wa-color-warning-border-quiet: var(--wa-color-warning-20);
+      --wa-color-warning-border-normal: var(--wa-color-warning-30);
+      --wa-color-warning-border-loud: var(--wa-color-warning-40);
+      --wa-color-warning-on-quiet: var(--wa-color-warning-60);
+      --wa-color-warning-on-normal: var(--wa-color-warning-70);
+      --wa-color-warning-on-loud: oklch(100% 0 0);
+
+      --wa-color-danger-fill-quiet: var(--wa-color-danger-10);
+      --wa-color-danger-fill-normal: var(--wa-color-danger-20);
+      --wa-color-danger-fill-loud: var(--wa-color-danger-50);
+      --wa-color-danger-border-quiet: var(--wa-color-danger-20);
+      --wa-color-danger-border-normal: var(--wa-color-danger-30);
+      --wa-color-danger-border-loud: var(--wa-color-danger-40);
+      --wa-color-danger-on-quiet: var(--wa-color-danger-60);
+      --wa-color-danger-on-normal: var(--wa-color-danger-70);
+      --wa-color-danger-on-loud: oklch(100% 0 0);
+
+      --wa-color-neutral-fill-quiet: var(--wa-color-neutral-10);
+      --wa-color-neutral-fill-normal: var(--wa-color-neutral-20);
+      --wa-color-neutral-fill-loud: var(--wa-color-neutral-90);
+      --wa-color-neutral-border-quiet: var(--wa-color-neutral-20);
+      --wa-color-neutral-border-normal: var(--wa-color-neutral-30);
+      --wa-color-neutral-border-loud: var(--wa-color-neutral-40);
+      --wa-color-neutral-on-quiet: var(--wa-color-neutral-60);
+      --wa-color-neutral-on-normal: var(--wa-color-neutral-70);
+      --wa-color-neutral-on-loud: var(--wa-color-neutral-05);
+    }
   }
 
   :where(:root),
@@ -228,7 +314,7 @@
     --wa-line-height-normal: 1.6;
     --wa-line-height-expanded: 2;
 
-    --wa-link-decoration-default: underline color-mix(in oklab, currentColor 70%, transparent) dotted;
+    --wa-link-decoration-default: underline color-mix(in oklab, currentColor 70%, oklch(0% 0 0 / 0)) dotted;
     --wa-link-decoration-hover: underline;
     /* #endregion */
 
