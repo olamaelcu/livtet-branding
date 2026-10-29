@@ -1,21 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" width="560" height="240" style="font-family:system-ui,sans-serif;font-size:13px;">
   <rect width="560" height="240" fill="#faf9f6"/>
-  <text x="280" y="22" text-anchor="middle" font-weight="600" font-size="15" fill="#1a1a1a">Very Faint Orange</text>
+  <text x="280" y="22" text-anchor="middle" font-weight="600" font-size="15" fill="#1a1a1a">White-Washed Surface (96% 0.02 90)</text>
 
   <rect x="30" y="50" width="80" height="80" rx="8" fill="#1a4d2e" stroke="none"/>
   <text x="70" y="85" text-anchor="middle" fill="#fff" font-weight="600" font-size="12">Brand</text>
   <text x="70" y="105" text-anchor="middle" fill="#e8e6e1" font-size="10">Library Green</text>
   <text x="70" y="122" text-anchor="middle" fill="#e8e6e1" font-size="10">45% L · 0.11 C</text>
 
-  <rect x="170" y="50" width="80" height="80" rx="8" fill="#fdf5eb" stroke="#f0dcc0" stroke-width="1"/>
-  <text x="210" y="85" text-anchor="middle" fill="#5a3a20" font-weight="600" font-size="12">Surface Light</text>
-  <text x="210" y="105" text-anchor="middle" fill="#8a6a50" font-size="10">95% · 0.03 · 65</text>
-  <text x="210" y="122" text-anchor="middle" fill="#b09070" font-size="10">very faint orange</text>
+  <rect x="170" y="50" width="80" height="80" rx="8" fill="#f8f7f4" stroke="#eae8e0" stroke-width="1"/>
+  <text x="210" y="85" text-anchor="middle" fill="#3a3a36" font-weight="600" font-size="12">Surface Light</text>
+  <text x="210" y="105" text-anchor="middle" fill="#6a6a60" font-size="10">96% · 0.02 · 90</text>
+  <text x="210" y="122" text-anchor="middle" fill="#9a9a90" font-size="10">white-washed</text>
 
   <rect x="310" y="50" width="80" height="80" rx="8" fill="#171610" stroke="#2a2618" stroke-width="1"/>
   <text x="350" y="85" text-anchor="middle" fill="#e8e0c0" font-weight="600" font-size="12">Surface Dark</text>
   <text x="350" y="105" text-anchor="middle" fill="#c0b090" font-size="10">9% · 0.06 · 110</text>
 
-  <text x="30" y="165" font-size="11" fill="#3a3a36">Surface light: oklch(95% 0.03 65) — faint orange tint</text>
-  <text x="30" y="220" font-size="10" fill="#8a8a80">Regenerated · SVG updated</text>
+  <text x="30" y="165" font-size="11" fill="#3a3a36">Surface light: oklch(96% 0.02 90) — original white, slightly warm</text>
 </svg>
