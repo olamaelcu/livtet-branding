@@ -13,7 +13,7 @@
   .wa-dark .wa-palette-livtet.wa-invert,
   .wa-dark .wa-palette-livtet .wa-invert {
     --wa-color-surface-border: oklch(88% 0.02 85);
-    --wa-color-surface-default: oklch(96.8% 0.02 90);
+    --wa-color-surface-default: oklch(92% 0.08 105);
     --wa-color-surface-lowered: oklch(94% 0.02 85);
     --wa-color-surface-raised: oklch(99% 0.005 90);
 
@@ -31,7 +31,7 @@
   .wa-light .wa-palette-livtet.wa-invert,
   .wa-light .wa-palette-livtet .wa-invert {
     --wa-color-surface-border: oklch(21% 0.02 100);
-    --wa-color-surface-default: oklch(9% 0.02 95);
+    --wa-color-surface-default: oklch(9% 0.06 110);
     --wa-color-surface-lowered: oklch(6% 0.015 95);
     --wa-color-surface-raised: oklch(16% 0.015 100);
 
@@ -48,7 +48,7 @@
   @media (prefers-color-scheme: dark) {
     :where(:root) {
     --wa-color-surface-border: oklch(21% 0.02 100);
-    --wa-color-surface-default: oklch(9% 0.02 95);
+    --wa-color-surface-default: oklch(9% 0.06 110);
     --wa-color-surface-lowered: oklch(6% 0.015 95);
     --wa-color-surface-raised: oklch(16% 0.015 100);
 
@@ -66,7 +66,7 @@
     --wa-color-brand-80: oklch(72% 0.11 158);
     --wa-color-brand-70: oklch(60% 0.12 158);
     --wa-color-brand-60: oklch(50% 0.12 158);
-    --wa-color-brand-50: oklch(42% 0.1 158);
+    --wa-color-brand-50: oklch(45% 0.11 158);
     --wa-color-brand-40: oklch(35% 0.08 158);
     --wa-color-brand-30: oklch(28% 0.06 158);
     --wa-color-brand-20: oklch(20% 0.05 158);
